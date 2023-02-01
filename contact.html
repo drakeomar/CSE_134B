@@ -15,7 +15,7 @@
     </header>
     <main>
         <canvas>
-            
+
         </canvas>
         <h2> Submit Anonymous Feedback </h2>
         <form>
@@ -32,22 +32,24 @@
         <br>
         <h2> Get In Contact! </h2>
         <form action="/contact_collector.php" method="post">
-            <label for="role">What describes you best from the list:</label>
-            <input list="roles" name="role" id="role" required="true">
-            <datalist id="roles">
-                <option value="Recruiter">
-                <option value="Grader">
-                <option value="Professor">
-                <option value="Student">
-                <option value="Other">
-            </datalist>
-            <br><br>
-            <label for="email">What is a good email?: </label>
-            <input type="text" size="24" id="email" required="true">
-            <br><br>
-            <label for="optional"> Provide an optional message! </label>
-            <textarea id="optional"> </textarea>
-            <input type="submit">
+            <fieldset>
+                <label for="role">What describes you best from the list:</label>
+                <input list="roles" name="role" id="role" required="true">
+                <datalist id="roles">
+                    <option value="Recruiter">
+                    <option value="Grader">
+                    <option value="Professor">
+                    <option value="Student">
+                    <option value="Other">
+                </datalist>
+                <br><br>
+                <label for="email">What is a good email?: </label>
+                <input type="text" size="24" id="email" required="true">
+                <br><br>
+                <label for="optional"> Provide an optional message! </label>
+                <textarea id="optional"> </textarea>
+                <input type="submit">
+            </fieldset>
         </form>
         <template>
             <h3>Message Sent!</h3> <!-- display if basic form filled out and submitted -->
