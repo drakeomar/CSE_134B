@@ -15,10 +15,10 @@
     </header>
     <main>
         <h2> Submit Anonymous Feedback </h2>
-        <form>
-            <em>Feedback: </em>
+        <form action="/feedback_collector.php" method="post">
+            <label for="feedback"><em>Feedback: </em></label>
             <br>
-            <textarea> </textarea>
+            <textarea id="feedback"> </textarea>
         </form>
         <button>
             Submit Feedback
@@ -32,7 +32,7 @@
             <legend><code>Send a Message!</code></legend>
             <fieldset>
                 <label for="roles">What describes you best from the list: </label>
-                <select id="select-roles">
+                <select id="roles">
                     <optgroup label="Academic">
                         <option>Professor</option>
                         <option>T.A./I.A.</option>
