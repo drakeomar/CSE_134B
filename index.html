@@ -2,8 +2,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script></script>
-    <style></style>
+    <script>
+
+    </script>
+    <style>
+        body{
+            background: whitesmoke;
+        }
+    </style>
     <title> Drake Omar's Portfolio </title>
 </head>
 <body>
@@ -17,29 +23,31 @@
     </header>
     <br>
     <main>
-        <section>
+        <section> <!-- Intro Section -->
             <h1>Drake Omar's Portfolio</h1>
             <picture> <!-- personal image -->
-
+                <source media="(min-width:650px)" srcset="profile_picture_2.jpg">
+                <source media="(min-width:465px)" srcset="profile_picture_1.jpg">
+                <img src="profile_picture.jpg" alt="Profile Picture">
             </picture>
             <p> Enjoy some music as you peruse... </p>
             <audio controls> <!-- background audio -->
-                <source src="site_audio.mp3" type="audio/mpeg">
-                This filetype is not supported by your browser...
+                <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
             </audio>
 
         </section>
         <br>
-        <section>
+        <section> <!-- professional experience section -->
             <h2>Professional Experience</h2>
             <h3> Work Experience </h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/bdi-VHhVxaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p> I worked for a couple years at Wire Cut Company,
+            <p> I worked for a couple of years at Wire Cut Company,
                 Inc., as the CIO and Systems Administrator. Much of my work
                 included server management, network security, IT, </p>
             <aside> Wire Cut is an advanced manufacturing company specializing in Electric Discharge Machining for Aerospace and Defense </aside>
-            <h3><code>CS Projects</code></h3>
-            <table>
+            <h3>CS Experience</h3>
+            <table> <!-- Projects Table -->
+                <caption>CS Projects</caption>
                 <colgroup>
                     <col>
                     <col style="background-color: aliceblue">
@@ -65,8 +73,8 @@
             <p> Click <a><em><strong>here</strong></em></a> for more projects..</p>
         </section>
         <br>
-        <section> <!-- ART SECTION -->
-            <h2>Art</h2>
+        <section> <!-- Art Section -->
+            <h2>Art Endeavors</h2>
             <figure>
                 <img href="/img/art1.jpg">
                 <figcaption> Waves and Stripes </figcaption>
@@ -81,7 +89,7 @@
             </figure>
             <details>
                 <summary> Breaking Ice - Description </summary>
-                <p> Made in 2020, this orca presents the duality of prey and predator. </p>
+                <p> Made in 2020, this orca presents the duality of prey <i>and</i> predator. </p>
             </details>
             <p> </p>
         </section>
