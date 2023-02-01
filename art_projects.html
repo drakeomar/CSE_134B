@@ -14,7 +14,14 @@
         <hr>
     </header>
     <main>
-        <h1>Art Endeavors</h1>
+        <canvas id="canvas-element" width="400" height="200"></canvas>
+        <script>
+            var c = document.getElementById("canvas-element");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#000000";
+            ctx.font = "24px Arial";
+            ctx.fillText("Art Endeavors", 40, 100);
+        </script>
         <pre>                           ``.--:///+++oo++//:-`
                                   `--/+++///::::-:://++osyyhys+:.
                                .:++/:-....```.```......-:/++osshhyo:.

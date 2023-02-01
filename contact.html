@@ -14,9 +14,6 @@
         <hr>
     </header>
     <main>
-        <canvas>
-
-        </canvas>
         <h2> Submit Anonymous Feedback </h2>
         <form>
             <em>Feedback: </em>
@@ -48,16 +45,17 @@
                         <option>Other</option>
                     </optgroup>
                     <optgroup label="Enthusiast">
-                        <option></option>
+                        <option>Hobbyist</option>
+                        <option>Other</option>
                     </optgroup>
                 </select>
-                <label for="role">How did you find this site? </label>
-                <input list="roles" name="role" id="role" required="false">
-                <datalist id="roles">
-                    <option value="Recruiter">
-                    <option value="Grader">
-                    <option value="Professor">
-                    <option value="Student">
+                <label for="finder">How did you find this site? </label>
+                <input list="found" name="finder" id="finder" required="false">
+                <datalist id="found">
+                    <option value="Google">
+                    <option value="LinkedIn">
+                    <option value="UCSD">
+                    <option value="Indeed">
                     <option value="Other">
                 </datalist>
                 <br><br>
