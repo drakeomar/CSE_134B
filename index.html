@@ -5,8 +5,8 @@
     <title> Drake Omar's Portfolio </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
-            background: whitesmoke;
+        audio{
+            margin: 2vh;
         }
     </style>
     <link href="main.css" rel="stylesheet">
@@ -15,25 +15,27 @@
 <body>
     <header>
         <nav>
-            <p><a href="/"> Home </a></p>
-            <p><a href="/professional_experience.html/"> CS Projects </a></p>
-            <p><a href="/art_projects.html/"> Art Endeavors </a></p>
+            <a href="/"><p>  Home </p></a>
+            <a href="/professional_experience.html/"> CS Projects </a>
+            <a href="/art_projects.html/"> Art Endeavors </a>
+            <a href="/contact.html/"> Contact </a>
         </nav>
         <hr>
     </header>
     <br>
     <main>
         <section class="intro"> <!-- Intro Section -->
-            <h1>Drake Omar's Portfolio</h1>
+            <h1>Drake Omar's Portfolio hello</h1>
+            <p> Enjoy some music as you peruse... </p>
+            <audio controls> <!-- background audio -->
+                <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
+            </audio>
             <picture> <!-- personal image -->
                 <source media="(min-width:650px)" srcset="/multimedia/img/profile_picture.png">
                 <source media="(min-width:465px)" srcset="/multimedia/img/profile_picture3.png">
                 <img src="/multimedia/img/profile_picture2.png" alt="Profile Picture">
             </picture>
-            <p> Enjoy some music as you peruse... </p>
-            <audio controls> <!-- background audio -->
-                <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
-            </audio>
+
 
         </section>
         <br>
@@ -88,7 +90,7 @@
                 <figcaption> Breaking Ice </figcaption>
             </figure>
             <details>
-                <summary> Breaking Ice - Description </summary>
+                <summary> Blackfish Prism Break- Description </summary>
                 <p> Made in 2020, this orca presents the duality of prey <i>and</i> predator. </p>
             </details>
             <p> Click <a href="art_projects.html"><em><strong>here</strong></em></a> for more projects..</p>
