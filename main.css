@@ -43,7 +43,7 @@
     --main-background-color: #1A1A1D;
     --primary-color: #b42f5d;
     --secondary-color: #EE4C7C;
-    --primary-text-color: #D1e8E2;
+    --primary-text-color: #e8d1d7;
     --secondary-text-color: white;
     --line-color: #C3073F;
     --accent-color: #6F2232;
@@ -55,7 +55,7 @@ h1 {
     border-right: .15em solid var(--primary-color); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto;
-    letter-spacing: .5em;
+    letter-spacing: .25em;
     animation:
             typing 3.5s steps(30,end),
             blink-caret 1s step-end infinite;
@@ -89,6 +89,7 @@ h1, h2, h3{
 h1, h2 {
     text-align: center;
 }
+
 nav {
     display: flex;
     flex-direction: row;
@@ -105,6 +106,15 @@ nav p {
 nav a {
     text-decoration: none;
     color: white;
+}
+
+nav p:hover{
+    background-color: var(--accent-color);
+}
+
+.profile-picture{
+    width: 30vw;
+    height: 40vh;
 }
 
 .intro {
