@@ -4,34 +4,65 @@
     <meta charset="UTF-8">
     <title> Drake Omar's Portfolio </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Drake Omar, portfolio, art, cs, resume">
     <style>
         audio{
             margin: 2vh;
         }
+        #work-video{
+            border-color: #6F2232;
+            border-radius: 5px;
+            background-color: #6F2232;
+        }
+
     </style>
     <link href="main.css" rel="stylesheet">
     <script src="myjs.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/"><p> Home </p></a>
-            <a href="/professional_experience.html/"> <p> CS Projects </p></a>
-            <a href="/art_projects.html/"> <p> Art Endeavors </p></a>
-            <a href="/contact.html/"> <p> Contact </p> </a>
-        </nav>
-        <hr>
+        <div class="navbar">
+
+            <nav class="nav-items">
+                <a href="/"><img src="/img.png" alt="icon" width="30vw"></a>
+                <div id="mobile-items">
+                    <img src="/img.png" alt="icon" width="30vw">
+                    <input id="check01" type="checkbox" name="menu" />
+                    <label for="check01"><img src="/img.png" alt="icon" width="30vw"></label>
+                    <ul class="menu-dropdown">
+                        <li><a>Home</a></li>
+                        <li><a>Work Experience</a></li>
+                        <li><a>Art</a></li>
+                        <li><a>Contact</a></li>
+                        <li><a>FAQs</a></li>
+                    </ul>
+                </div>
+                <div id="non-icon-items">
+                    <a class="non-icon" href="/"><p> Home </p></a>
+                    <a class="non-icon" href="/professional_experience.html/"> <p> CS Projects </p></a>
+                    <a class="non-icon" href="/art_projects.html/"> <p> Art Endeavors </p></a>
+                    <a class="non-icon" href="/contact.html/"> <p> Contact </p> </a>
+                </div>
+            </nav>
+        </div>
     </header>
     <br>
-    <main>
-        <section class="intro"> <!-- Intro Section -->
+    <hr>
+    <main id="main">
+        <section id="main-intro"> <!-- Intro Section -->
             <h1>Drake Omar's Portfolio </h1>
+            <div id="mobile-titles">
+                <h2 id="title-1" class="mobile-title">Drake</h2>
+                <h2 id="title-2" class="mobile-title">Omar's</h2>
+                <h2 id="title-3" class="mobile-title">Portfolio</h2>
+            </div>
+
             <p> Enjoy some music as you peruse... </p>
             <audio controls> <!-- background audio -->
                 <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
             </audio>
             <picture id="profile-picture"> <!-- personal image -->
-                <source media="(max-width:650px)" srcset="/multimedia/img/profile-image-med.webp">
+                <source media="(max-width:760px)" srcset="/multimedia/img/profile-image-med.webp">
                 <source media="(max-width:465px)" srcset="/multimedia/img/profile_picture3.png">
                 <img src="/multimedia/img/profile-image.avif" alt="Profile Picture">
             </picture>
@@ -39,42 +70,53 @@
 
         </section>
         <br>
-        <hr>
-        <br>
-        <section> <!-- professional experience section -->
+        <section id="main-experience"> <!-- professional experience section -->
             <h2>Professional Experience</h2>
-            <h3> Work Experience </h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bdi-VHhVxaI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p> I worked for a couple of years at Wire Cut Company,
-                Inc., as the CIO and Systems Administrator. Much of my work
-                included server management, network security, IT, </p>
-            <aside> Wire Cut is an advanced manufacturing company specializing in Electric Discharge Machining for Aerospace and Defense </aside>
-            <h3>CS Experience</h3>
-            <table> <!-- Projects Table -->
-                <caption>CS Projects</caption>
-                <colgroup>
-                    <col>
-                    <col style="background-color: aliceblue">
-                    <col>
-                </colgroup>
-                <tr>
-                    <th>Title</th>
-                    <th>Short Description</th>
-                    <th>Link</th>
-                </tr>
-                <tr>
-                    <td>DrakeO Analytics</td>
-                    <td>A website data collection and visualization project displaying tracked, analytical information using Node.js</td>
-                    <td> <a href="https://github.com/drakeomar/drakeomar-Web-Analytics-"> Github </a></td>
-                </tr>
-                <tr>
-                    <td>E2Gusto</td>
-                    <td>C# and WinForms application to convert the CSV payroll data
-                    in order to be formatted correctly for the payroll service</td>
-                    <td> <a href="https://github.com/drakeomar/Payroll_ACTUAL"> Github </a></td>
-                </tr>
-            </table>
-            <p> Click <a href="professional_experience.html"><em><strong>here</strong></em></a> for more projects..</p>
+            <section id="main-work-experience" title="Work Experience">
+                <h3> Work Experience </h3>
+                <div id="home-work">
+                    <iframe title="Wire Cut Company work Youtube video" id="work-video" width="560" height="315"
+                            src="https://www.youtube.com/embed/bdi-VHhVxaI"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                    <p> I worked for a couple of years at Wire Cut Company,
+                            Inc., as the CIO and Systems Administrator. Much of my work
+                            included server management, network security, IT,
+                    </p>
+                    <aside> <p>Wire Cut is an advanced manufacturing company specializing in
+                            Electric Discharge Machining for Aerospace and Defense </p>
+                    </aside>
+                </div>
+            </section>
+            <section id="main-cs-experience" title="CS Experience">
+                <h3>CS Experience</h3>
+                <table> <!-- Projects Table -->
+                    <caption>CS Projects</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th>Title</th>
+                        <th>Short Description</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>DrakeO Analytics</td>
+                        <td>A website data collection and visualization project displaying tracked, analytical information using Node.js</td>
+                        <td> <a href="https://github.com/drakeomar/drakeomar-Web-Analytics-"> Github </a></td>
+                    </tr>
+                    <tr>
+                        <td>E2Gusto</td>
+                        <td>C# and WinForms application to convert the CSV payroll data
+                            in order to be formatted correctly for the payroll service</td>
+                        <td> <a href="https://github.com/drakeomar/Payroll_ACTUAL"> Github </a></td>
+                    </tr>
+                </table>
+                <p> Click <a href="professional_experience.html"><em><strong>here</strong></em></a> for more projects..</p>
+            </section>
         </section>
         <br>
         <section> <!-- Art Section -->
@@ -101,7 +143,7 @@
     <br><hr>
     <footer>
         <h3> Get in Contact with Me! </h3>
-        <p> Access the <span style="background: gold"> <a href="/contact.html"> Contact Page </a></span> </p>
+        <p> Access the <span style="background: #eea3a3"> <a href="/contact.html"> Contact Page </a></span> </p>
         <p> <em>OR reach me by...</em></p>
         <p><b>  Phone Number: </b> <a href="tel:+15015549898">501-554-9898</a> </p>
         <p><b> Email: </b> <a href="mailto:drakeomar@icloud.com"> drakeomar@icloud.com </a> </p>

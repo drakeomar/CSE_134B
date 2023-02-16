@@ -50,34 +50,210 @@
 
 }
 
-h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid var(--primary-color); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto;
-    letter-spacing: .25em;
-    animation:
-            typing 3.5s steps(30,end),
-            blink-caret 1s step-end infinite;
+@media only screen and (min-width: 481px) {
+    h1 {
+        overflow: hidden;
+        border-right: .15em solid var(--primary-color);
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .25em;
+        /** typing effect for non-mobile sized devices with screens*/
+        animation: typing 3.5s steps(30, end),
+        blink-caret 1s step-end infinite;
+    }
+    nav p:hover{
+        background-color: var(--accent-color);
+    }
+
+
+    #non-icon-items{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        width:100%;
+        padding-left:0px;
+    }
+
+    nav img{
+        padding-left: 20%;
+    }
+
+    nav p {
+        background-color: var(--primary-color);
+        padding: .65em;
+        border-radius: .25em;
+
+    }
+
+    .non-icon {
+        text-decoration: none;
+        color: var(--primary-text-color);
+    }
+
+    .mobile-title{
+        display:none;
+    }
+    #mobile-items{
+        display:none;
+    }
+
+    #main-intro {
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-/* The typing effect */
 @keyframes typing {
     from { width: 0 }
-    to { width: 35ch}
+    to { width: 25ch}
 }
 
-/* The typewriter cursor effect */
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--primary-color); }
 }
 
-*{
+
+@media only screen and (max-width: 480px) {
+    nav a {
+        display: none;
+    }
+
+    .menu-dropdown{
+        display: none;
+    }
+
+    section#main-intro > h1 {
+        display: none;
+    }
+
+    .mobile-title {
+        overflow: hidden;
+        visibility: visible;
+        border-right: .15em solid var(--primary-color);
+        margin: 0 auto;
+        letter-spacing: .25em;
+    }
+
+    #non-icon-items {
+        display:none;
+    }
+
+    nav img{
+        padding:.65em;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 8ch}
+    }
+
+    @keyframes typing-2 {
+        from { width: 0 }
+        to { width: 12ch}
+    }
+
+    @keyframes typing-3 {
+        from { width: 0 }
+        to { width: 10ch}
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: var(--primary-color); }
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0}
+        to {opacity: 1}
+    }
+
+    #title-1 {
+        opacity: 0;
+        /** typing effect for mobile sized devices with screens*/
+        animation: typing 1.5s steps(15,end),
+                blink-caret 1s step-end,
+                fadeIn .15s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+    }
+
+    #title-2 {
+        opacity: 0;
+        /** typing effect for mobile sized devices with screens*/
+        animation: typing-2 1.5s steps(15,end),
+                    blink-caret 1s step-end,
+                    .15s fadeIn;
+        animation-fill-mode: forwards;
+        animation-delay: 2.1s;
+    }
+
+    #title-3 {
+        opacity: 0;
+        /** typing effect for mobile sized devices with screens*/
+        animation: typing-3 1.5s steps(18,end),
+                blink-caret 1s step-end infinite,
+                .15s fadeIn;
+        animation-fill-mode: forwards;
+        animation-delay: 3.6s;
+    }
+
+    #main-intro {
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile-items{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*hide the inputs/checkmarks and submenu*/
+    input, ul.menu-dropdown {
+        display: none;
+    }
+
+    /*position the label*/
+    label {
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+
+    /*show the submenu when input is checked*/
+    input:checked~ul.menu-dropdown {
+        display: block;
+    }
+
+    input:checked img {
+        display: none;
+    }
+
+}
+.nav-items {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    /*margin-left: 10vw;*/
+
+}
+body{
     font-family: Urbanist;
     color: var(--primary-text-color);
 }
 
+#main{
+    overflow: auto;
+    overflow-x: visible;
+}
 h1{
     font-size: 2rem;
 }
@@ -90,26 +266,23 @@ h1, h2 {
     text-align: center;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+main h3 {
+    margin-left: 10%;
 }
 
-nav p {
-    background-color: var(--primary-color);
-    padding: 1em;
-    border-radius: .25em;
+.navbar {
+    overflow: hidden;
+    margin-bottom: 0 auto;
+    margin-left: -0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(36, 14, 14)
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-nav p:hover{
-    background-color: var(--accent-color);
+main a, footer a {
+    color: var(--line-color);
 }
 
 .profile-picture{
@@ -117,11 +290,6 @@ nav p:hover{
     height: 40vh;
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 body{
     background-color: var(--main-background-color);
@@ -132,12 +300,59 @@ main{
     background-color: var(--main-background-color);
 }
 
+aside {
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px var(--line-color);
+    font-style: italic;
+}
+
+#home-work{
+    display: flex;
+    flex-direction: row;
+}
+
+#work-video{
+    width: 50%;
+    margin: 1rem;
+}
+
+#home-work p, #home-work aside{
+    width: 25%;
+}
+
 hr {
     border-color: var(--line-color);
 }
+
+#main-work-experience{
+    background-color: rgb(84, 25, 25);
+}
+
+#main-cs-experience {
+    background-color: var(--primary-text-color);
+    color: #1A1A1D;
+}
+
+#main-experience {
+    background-color: var(--primary-text-color);
+}
+
+#main-experience h2 {
+    color: #1A1A1D;
+}
+#main-experience{
+    padding-top: 1rem;
+}
+
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: -.5rem;
+    background-color: rgb(36, 14, 14);
 }
