@@ -175,6 +175,9 @@ body {
         visibility: visible;
         opacity: 1;
     }
+    #art-details-2-mobile{
+        display: none;
+    }
 }
 
 @keyframes typing {
@@ -351,6 +354,10 @@ body {
     }
 
     input:checked img {
+        display: none;
+    }
+
+    #art-details-2{
         display: none;
     }
 
