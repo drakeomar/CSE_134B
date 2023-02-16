@@ -169,7 +169,11 @@ body {
 
 
 @media only screen and (max-width: 505px) {
-    nav a {
+    nav>a {
+        display: none;
+    }
+
+    #non-icon-items{
         display: none;
     }
 
@@ -275,6 +279,10 @@ body {
         justify-content: space-between;
     }
 
+    #home-logo{
+        position: relative;
+        display: block;
+    }
     /*hide the inputs/checkmarks and submenu*/
     input, ul.menu-dropdown {
         display: none;
@@ -328,10 +336,10 @@ h1, h2 {
 }
 
 main h3 {
-    margin-left: 10%;
+    /*margin-left: 10%;*/
 }
 
-.navbar {
+.nav-wrapper {
     overflow: hidden;
     margin-bottom: 0 auto;
     margin-left: -0.5rem;

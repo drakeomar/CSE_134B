@@ -8,12 +8,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/"> Home </a>
-            <a href="/professional_experience.html/"> CS Projects </a>
-            <a href="/art_projects.html/"> Art Endeavors </a>
-        </nav>
-        <hr>
+        <div class="nav-wrapper">
+            <nav class="nav-items">
+                <a href="/"><img src="/img.png" alt="icon" width="30vw"></a>
+                <div id="mobile-items">
+                    <label><a href="/index.html"><img id="home-logo" src="/img.png" alt="icon" width="30vw"></a></label>
+                    <input id="check01" type="checkbox" name="menu" />
+                    <label for="check01"><img src="/img.png" alt="icon" width="30vw"></label>
+                    <ul class="menu-dropdown">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/professional_experience.html">Work Experience</a></li>
+                        <li><a href="/art_projects.html">Art</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div id="non-icon-items">
+                    <a class="non-icon" href="/"><p> Home </p></a>
+                    <a class="non-icon" href="/professional_experience.html/"> <p> CS Projects </p></a>
+                    <a class="non-icon" href="/art_projects.html/"> <p> Art Endeavors </p></a>
+                    <a class="non-icon" href="/contact.html/"> <p> Contact </p> </a>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         <h1> Contact Me! </h1>
