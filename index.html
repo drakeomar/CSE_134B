@@ -24,6 +24,41 @@
             text-align: center;
         }
 
+        #main-experience{
+            margin-top: 1rem;
+        }
+
+        #main-cs-experience{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table{
+            margin: 1rem;
+            border: #6F2232 solid 2px;
+            border-radius: 1rem;
+        }
+
+        tr:nth-child(odd){
+            background-color: aliceblue;
+        }
+
+
+        @media only screen and (min-width: 506px) {
+            #art-1, #art-2{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        @media only screen and (max-width: 505px){
+            #art-1, #art-2{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
     </style>
     <link href="main.css" rel="stylesheet">
     <script src="myjs.js"></script>
@@ -35,13 +70,18 @@
                 <a href="/"><img src="/img.png" alt="icon" width="30vw"></a>
                 <div id="mobile-items">
                     <label><a href="/index.html"><img id="home-logo" src="/img.png" alt="icon" width="30vw"></a></label>
+
                     <input id="check01" type="checkbox" name="menu" />
-                    <label for="check01"><img src="/img.png" alt="icon" width="30vw"></label>
+                    <label for="check01"><div class="line"></div><div class="line"></div><div class="line"></div></label>
                     <ul class="menu-dropdown">
                         <li><a href="/index.html">Home</a></li>
+                        <hr>
                         <li><a href="/professional_experience.html">Work Experience</a></li>
+                        <hr>
                         <li><a href="/art_projects.html">Art</a></li>
+                        <hr>
                         <li><a href="/contact.html">Contact</a></li>
+                        <hr>
                         <li><a href="/faqs.html">FAQs</a></li>
                     </ul>
                 </div>
@@ -69,11 +109,18 @@
             <audio controls> <!-- background audio -->
                 <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
             </audio>
-            <picture id="profile-picture"> <!-- personal image -->
-                <source media="(max-width:760px)" srcset="/multimedia/img/profile-image-med.webp">
-                <source media="(max-width:465px)" srcset="/multimedia/img/profile_picture3.png">
-                <img src="/multimedia/img/profile-image.avif" alt="Profile Picture">
-            </picture>
+            <section id="personal-info">
+                <h3 class="appear-1">Github:<p class="appear-1"> LINK </p></h3>
+
+                <picture id="profile-picture"> <!-- personal image -->
+                    <source media="(max-width:760px)" srcset="/multimedia/img/profile-image-med.webp">
+                    <source media="(max-width:480px)" srcset="/multimedia/img/profile-image.webp">
+                    <img src="/multimedia/img/profile-image.webp" alt="Profile Picture">
+                </picture>
+                <h3 class="appear-2">LinkedIn: <p class="appear-2"> Profile LINK</p> </h3>
+
+            </section>
+
 
 
         </section>
@@ -96,10 +143,11 @@
                             Electric Discharge Machining for Aerospace and Defense </p>
                     </aside>
                 </div>
+                <hr>
             </section>
             <section id="main-cs-experience" title="CS Experience">
                 <h3>CS Experience</h3>
-                <table> <!-- Projects Table -->
+                <table border="1" frame="void" rules="rows"> <!-- Projects Table -->
                     <caption>CS Projects</caption>
                     <colgroup>
                         <col>
@@ -124,13 +172,14 @@
                     </tr>
                 </table>
                 <p> Click <a href="professional_experience.html"><em><strong>here</strong></em></a> for more projects..</p>
+                <hr>
             </section>
         </section>
         <br>
         <section> <!-- Art Section -->
             <h2>Art Endeavors</h2>
             <section id="main-art">
-                <div id="art-1">
+                <section id="art-1">
                     <figure>
                         <figcaption> Waves and Stripes </figcaption>
                         <img src="/multimedia/img/art1.jpeg">
@@ -139,8 +188,8 @@
                         <summary> Waves and Stripes - Description </summary>
                         <p> Made in 2017, this piece illustrates the fine line between nature and our perspective. </p>
                     </details>
-                </div>
-                <div id="art-2">
+                </section>
+                <section id="art-2">
                     <details id="art-details-2">
                         <summary> Blackfish Prism Break- Description </summary>
                         <p> Made in 2020, this orca presents the duality of prey <i>and</i> predator. </p>
@@ -149,7 +198,7 @@
                         <figcaption> BlackFish Prism Break </figcaption>
                         <img src="/multimedia/img/art3.jpeg">
                     </figure>
-                </div>
+                </section>
 
             </section>
             <p> Click <a href="art_projects.html"><em><strong>here</strong></em></a> for more projects..</p>

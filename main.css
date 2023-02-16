@@ -75,6 +75,15 @@ body {
         justify-content: space-around;
         width:100%;
         padding-left:0px;
+
+    }
+
+    /**hover enlarge effect (transition/transform)*/
+    #non-icon-items p{
+        transition: all .3s ease-in;
+    }
+    #non-icon-items p:hover{
+        transform: scale(1.2);
     }
 
     nav img{
@@ -154,6 +163,18 @@ body {
         box-shadow: inset 5px 0 5px -5px var(--line-color);
         font-style: italic;
     }
+    .appear-1{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 1s linear;
+    }
+    .appear-2{
+
+    }
+    .appear-1{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 @keyframes typing {
@@ -171,6 +192,15 @@ body {
 @media only screen and (max-width: 505px) {
     nav>a {
         display: none;
+    }
+
+
+    .line {
+        height: .25rem;
+        width: 2.5rem;
+        margin: .5rem auto;
+        background-color: var(--primary-text-color);
+        border-radius: 1rem;
     }
 
     #non-icon-items{
@@ -274,9 +304,10 @@ body {
     }
 
     #mobile-items{
+        width:100%;
         display:flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: left;
     }
 
     #home-logo{
@@ -288,6 +319,25 @@ body {
         display: none;
     }
 
+    .menu-dropdown{
+        list-style-type:none;
+        transform: skewX(30deg) translateX(5rem);
+        transform-origin: bottom left;
+    }
+
+    .menu-dropdown li{
+        transform: skewX(-30deg);
+    }
+
+    .menu-dropdown hr{
+        border-color: #C3073F;
+    }
+
+    header a{
+        color: var(--primary-text-color);
+        text-decoration: none;
+    }
+
     /*position the label*/
     label {
         position: relative;
@@ -296,7 +346,7 @@ body {
     }
 
     /*show the submenu when input is checked*/
-    input:checked~ul.menu-dropdown {
+    input:checked~ul {
         display: block;
     }
 
@@ -341,8 +391,7 @@ main h3 {
 
 .nav-wrapper {
     overflow: hidden;
-    margin-bottom: 0 auto;
-    margin-left: -0.5rem;
+    margin-bottom: 0;
     width: 100%;
     position: fixed;
     top: 0;
@@ -388,9 +437,8 @@ hr {
 
 #main-experience h2 {
     color: #1A1A1D;
+    background-color: var(--primary-text-color);
 }
-
-
 
 footer {
     display: flex;
