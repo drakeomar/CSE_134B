@@ -50,7 +50,10 @@
 
 }
 
-@media only screen and (min-width: 481px) {
+body {
+    margin: 0px;
+}
+@media only screen and (min-width: 506px) {
     h1 {
         overflow: hidden;
         border-right: .15em solid var(--primary-color);
@@ -103,6 +106,54 @@
         flex-direction: column;
         align-items: center;
     }
+
+    #home-work{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #work-video{
+        width: 50%;
+        margin: 1rem;
+    }
+
+    #home-work p, #home-work aside{
+        width: 25%;
+    }
+
+    #main-art div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #art-1{
+        justify-content: flex-start;
+    }
+
+    #art-2{
+        justify-content: flex-end;
+    }
+
+    figure {
+        display: inline-block;
+        border: 1px dotted gray;
+        margin: 20px; /* adjust as needed */
+    }
+    figure img {
+        vertical-align: top;
+    }
+    figure figcaption {
+        border: 1px dotted blue;
+        text-align: center;
+    }
+    aside {
+        width: 40%;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
+        float: right;
+        box-shadow: inset 5px 0 5px -5px var(--line-color);
+        font-style: italic;
+    }
 }
 
 @keyframes typing {
@@ -117,7 +168,7 @@
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 505px) {
     nav a {
         display: none;
     }
@@ -146,6 +197,16 @@
         padding:.65em;
     }
 
+    #main-experience{
+
+    }
+    #home-work{
+        display:flex;
+        flex-direction:column;
+    }
+    #work-video{
+        width: 100%;
+    }
     @keyframes typing {
         from { width: 0 }
         to { width: 8ch}
@@ -300,29 +361,6 @@ main{
     background-color: var(--main-background-color);
 }
 
-aside {
-    width: 40%;
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px var(--line-color);
-    font-style: italic;
-}
-
-#home-work{
-    display: flex;
-    flex-direction: row;
-}
-
-#work-video{
-    width: 50%;
-    margin: 1rem;
-}
-
-#home-work p, #home-work aside{
-    width: 25%;
-}
-
 hr {
     border-color: var(--line-color);
 }
@@ -343,9 +381,7 @@ hr {
 #main-experience h2 {
     color: #1A1A1D;
 }
-#main-experience{
-    padding-top: 1rem;
-}
+
 
 
 footer {

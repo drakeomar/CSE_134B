@@ -11,8 +11,12 @@
         }
         #work-video{
             border-color: #6F2232;
-            border-radius: 5px;
+            border-radius: .3rem;
             background-color: #6F2232;
+        }
+        #main-experience>h2{
+            padding-top: 1rem;
+            border-top: #6F2232 solid;
         }
 
     </style>
@@ -121,22 +125,29 @@
         <br>
         <section> <!-- Art Section -->
             <h2>Art Endeavors</h2>
-            <figure>
-                <img src="/multimedia/img/art1.jpeg">
-                <figcaption> Waves and Stripes </figcaption>
-            </figure>
-            <details>
-                <summary> Waves and Stripes - Description </summary>
-                <p> Made in 2017, this piece illustrates the fine line between nature and our perspective. </p>
-            </details>
-            <figure>
-                <img src="/multimedia/img/art3.jpeg">
-                <figcaption> Breaking Ice </figcaption>
-            </figure>
-            <details>
-                <summary> Blackfish Prism Break- Description </summary>
-                <p> Made in 2020, this orca presents the duality of prey <i>and</i> predator. </p>
-            </details>
+            <section id="main-art">
+                <div id="art-1">
+                    <figure>
+                        <figcaption> Waves and Stripes </figcaption>
+                        <img src="/multimedia/img/art1.jpeg">
+                    </figure>
+                    <details id="art-details-1">
+                        <summary> Waves and Stripes - Description </summary>
+                        <p> Made in 2017, this piece illustrates the fine line between nature and our perspective. </p>
+                    </details>
+                </div>
+                <div id="art-2">
+                    <details id="art-details-2">
+                        <summary> Blackfish Prism Break- Description </summary>
+                        <p> Made in 2020, this orca presents the duality of prey <i>and</i> predator. </p>
+                    </details>
+                    <figure>
+                        <figcaption> BlackFish Prism Break </figcaption>
+                        <img src="/multimedia/img/art3.jpeg">
+                    </figure>
+                </div>
+
+            </section>
             <p> Click <a href="art_projects.html"><em><strong>here</strong></em></a> for more projects..</p>
         </section>
     </main>
