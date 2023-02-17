@@ -50,6 +50,9 @@
         #main-art+p{
             text-align:center;
         }
+        #mobile-aside{
+            display: none;
+        }
         @media only screen and (min-width: 506px) {
             #art-1, #art-2{
                 width: 100%;
@@ -68,7 +71,14 @@
             iframe{
                 width: 100%;
             }
+            #mobile-aside{
+                display: block;
+            }
+            #reg-aside{
+                display: none;
+            }
         }
+
         #personal-info{
             display: flex;
             flex-direction: column; align-items: center;
@@ -175,6 +185,8 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                     </iframe>
+                    <p id="mobile-aside">Wire Cut is an advanced manufacturing company specializing in
+                        Electric Discharge Machining servicing the Aerospace and Defense Industries</p>
                     <p> I worked for several years at Wire Cut Company,
                         Inc., as the CIO and Systems Administrator. Much of my work
                         included server management, network security, IT-related tasks,
@@ -183,7 +195,7 @@
                         strategies, and make executive decisions pertaining to procurement, expenses,
                         guidance, strategy, and efficiency.
                     </p>
-                    <aside> <p>Wire Cut is an advanced manufacturing company specializing in
+                    <aside> <p id="reg-aside">Wire Cut is an advanced manufacturing company specializing in
                             Electric Discharge Machining for Aerospace and Defense </p>
                     </aside>
                 </div>
