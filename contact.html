@@ -6,11 +6,17 @@
     <title>Contact Information</title>
     <link href="main.css" rel="stylesheet">
     <style>
+
         h1{
             margin-top: 5rem;
         }
+        button{
+            background-color: #b42f5d;
+            border-radius: 1rem;
+            border: #b42f5d solid;
+        }
         textarea{
-            width: 50%;
+            width: 70%;
             height: 5rem;
             margin: 0.5rem;
 
@@ -35,7 +41,6 @@
             width: 40vw;
         }
         fieldset{
-
             border-radius: .5rem;
             border: #e8d1d7 solid 2px;
 
@@ -45,6 +50,31 @@
             flex-direction: column;
             align-items: center;
             padding-bottom: 1rem;
+        }
+        @media only screen and (min-width: 505px){
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 15ch}
+            }
+            h1 {
+                /** typing effect for non-mobile sized devices with screens*/
+                animation: typing 2.0s steps(15, end),
+                blinking 1s step-end infinite;
+            }
+            #header-type{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            textarea{
+                width: 50%;
+                height: 5rem;
+                margin: 0.5rem;
+
+            }
+            #message-form textarea{
+                width: 50vw;
+            }
         }
     </style>
 </head>
@@ -79,7 +109,9 @@
         </div>
     </header>
     <main>
-        <h1> Contact Me! </h1><hr>
+        <section id="header-type">
+            <h1> Contact Me! </h1><hr>
+        </section>
         <section id="feedback-section" class="red-section">
             <h2> Submit Anonymous Feedback </h2>
             <form id="feedback-form" action="/feedback_collector.php" method="post">
@@ -87,7 +119,7 @@
                 <br>
                 <textarea id="feedback"> </textarea>
                 <div class="button-wrapper">
-                    <button>
+                    <button class="button">
                         Submit Feedback
                     </button>
                 </div>
@@ -119,6 +151,7 @@
                         <option>Other</option>
                     </optgroup>
                 </select>
+                <br>
                 <label for="finder">How did you find this site? </label>
                 <input list="found" name="finder" id="finder" required="false">
                 <datalist id="found">
@@ -133,17 +166,17 @@
                 <input type="text" size="24" id="email" required="true">
                 <br>
                 <label for="optional"> Provide an optional message! </label>
-                <br>
+
                 <textarea id="optional"> </textarea>
                 <br>
                 <div>
-                    <input type="submit">
+                    <input type="submit" class="button">
                     <svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 0C229.668571 0 0 229.668571 0 512s229.668571 512 512 512 512-229.668571 512-512S794.331429 0 512 0z m307.2 343.771429s-267.702857 295.497143-327.68 365.714285c-59.977143 70.217143-106.788571 0-106.788571 0L210.651429 529.554286s-27.794286-42.422857 21.942857-81.92c46.811429-38.034286 84.845714 0 84.845714 0l122.88 128.731428L746.057143 291.108571s29.257143-20.48 59.977143 5.851429c23.405714 21.942857 13.165714 46.811429 13.165714 46.811429z" fill="#68BF7B" /></svg>
                 </div>
 
             </fieldset>
         </form>
-                <template>
+        <template>
             <h3>Message Sent!</h3> <!-- display if basic form filled out and submitted -->
         </template>
     </main>
