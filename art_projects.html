@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Drake Omar's Art Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
     <link href="main.css" rel="stylesheet">
     <style>
         #art-intro {
@@ -12,6 +13,16 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+        .art_gallery{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #text-art{
+            font-size: .3rem;
+            display: flex; justify-content: center;
         }
         @media only screen and (min-width: 505px){
             @keyframes typing {
@@ -27,20 +38,10 @@
                 font-size: .5rem;
                 display: flex; justify-content: center;
             }
+
         }
-        .art_gallery{
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #text-art{
-            font-size: .5rem;
-            display: flex; justify-content: center;
-        }
+
         #canvas-element{
-            width: 100%;
-            height: 30%;
             background-color: white;
         }
     </style>
@@ -48,8 +49,8 @@
         let c = document.getElementById("canvas-element");
         let ctx = c.getContext("2d");
         ctx.fillStyle = "#FFFFFF";
-        ctx.font = "12px Arial";
-        ctx.fillText("Art Endeavors", 40,100);
+        ctx.font = "3px Arial";
+        ctx.fillText("Art Endeavors", 50,50);
     </script>
 </head>
 <body>
@@ -126,7 +127,7 @@
                                               `/ydmds-
         </pre>
 
-            <canvas id="canvas-element" width="200px" height="200px"></canvas>
+            <canvas id="canvas-element"></canvas>
             <video width="480" height="360" controls>
                 <source src="art_video.mp4" type="video/mp4">
                 This video is not supported in your browser.
@@ -150,6 +151,7 @@
                     <img src="/multimedia/img/art3-large.webp" alt="Tiger Sketch">
                 </picture>
         </section>
+        <hr>
     </main>
     <footer>
         <p> Get in Contact with Me! </p>

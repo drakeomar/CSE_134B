@@ -79,12 +79,13 @@ body {
     }
 
     /**hover enlarge effect (transition/transform)*/
-    #non-icon-items p{
+    #non-icon-items p,nav>a{
         transition: all .3s ease-in;
     }
-    #non-icon-items p:hover{
+    #non-icon-items p:hover,nav>a:hover{
         transform: scale(1.2);
     }
+
 
     nav img{
         padding-left: 20%;
@@ -466,4 +467,5 @@ footer {
     align-items: center;
     margin: 0%;
     background-color: rgb(36, 14, 14);
+    padding-bottom: 1rem;
 }

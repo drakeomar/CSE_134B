@@ -7,11 +7,27 @@
 
     <link href="main.css" rel="stylesheet">
     <style>
+        @media only screen and (min-width: 505px){
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 27ch}
+            }
+            h1 {
+                /** typing effect for non-mobile sized devices with screens*/
+                animation: typing 3.0s steps(30, end),
+                blinking 1s step-end infinite;
+            }
+            #exp-title{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
         #link-section{
             text-align: center;
         }
         h1{
-            padding-top: 4rem;
+            padding-top: 5rem;
         }
         h3{
             text-align: center;
@@ -40,6 +56,16 @@
 
         #resume-2{
             padding-bottom: 0.5rem;
+        }
+
+        #resume-1 li, #resume-2 li{
+            text-align: center;
+            padding: .25rem;
+            margin-right: 2rem;
+        }
+        ul{
+            text-align:center;
+            list-style-position:inside;
         }
     </style>
 </head>
@@ -74,8 +100,12 @@
         </div>
     </header>
     <main>
-        <h1> Professional Experience</h1>
+        <section id="exp-title">
+            <h1> Professional Experience</h1>
+        </section>
+
         <section id="resume">
+            <hr>
             <h2> Work and Resume Experience </h2>
             <section id="resume-1">
                 <ul> <h3> Wire Cut Company, Inc. </h3>
@@ -140,13 +170,16 @@
                     <td> <a href="https://github.com/drakeomar/BuyBot"> GitHub</a></td>
                 </tr>
             </table>
-            <code>
+            <pre>
+                <code>
 
                 for ( day = 0; day < forever; day++) {
-                apply();
-                interview();
+                    apply();
+                    interview();
                 }
             </code>
+            </pre>
+
         </section>
         <hr>
         <section id="link-section">
@@ -163,5 +196,6 @@
         <p><b> Phone Number: </b></p> <a href="tel:+15015549898">501-554-9898</a>
         <p><b> Email: </b></p> <a href="mailto:drakeomar@icloud.com"> drakeomar@icloud.com </a>
     </footer>
+    <hr>
 </body>
 </html>
