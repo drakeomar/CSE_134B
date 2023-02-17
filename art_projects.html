@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Drake Omar's Art Projects</title>
     <link href="main.css" rel="stylesheet">
+    <style>
+        h1{
+            padding-top: 4rem;
+        }
+        #text-art{
+            font-size: .5rem;
+            display: flex; justify-content: center;
+        }
+    </style>
+    <script>
+        var c = document.getElementById("canvas-element");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#000000";
+        ctx.font = "24px Arial";
+        ctx.fillText("Art Endeavors", 40, 100);
+    </script>
 </head>
 <body>
     <header>
@@ -37,15 +53,9 @@
         </div>
     </header>
     <main>
-        <canvas id="canvas-element" width="400" height="200"></canvas>
-        <script>
-            var c = document.getElementById("canvas-element");
-            var ctx = c.getContext("2d");
-            ctx.fillStyle = "#000000";
-            ctx.font = "24px Arial";
-            ctx.fillText("Art Endeavors", 40, 100);
-        </script>
-        <pre>                           ``.--:///+++oo++//:-`
+        <h1>Art Endeavors</h1>
+        <pre id="text-art">
+                                        ``.--:///+++oo++//:-`
                                   `--/+++///::::-:://++osyyhys+:.
                                .:++/:-....```.```......-:/++osshhyo:.
                            `-+++:-..```````````........-:::://++osyddy+.`
@@ -61,9 +71,9 @@
          `/y+/sdy/.`         +dso++:::yMMMMMMMMMMMMMMMMMMMMMMhooosyhdms      `.+sdNNMMmy:`
          :+oyhNh:`           odso//:-:hMMMMMMMMMMMMMMMMMMMMMMy+++syhdms        `:odNNh+hh+.
        `+shs++h:.            /myo+::::yMMMMMMMMMMMMMMMMMMMMMmo+++ohhmN/         `-yMNo  `.-.`
-       -/:o+oss:`            `dhs+++/:+mMMMMMMMMMMMMMMMMMMMNy+oosshdNm`         `omNs`
-        .:/oyyys:.`           +mho++//+omMMMMMMMMMMMMMMMMMMyo++oshhmN/         .shh/`
-          -+++/::-::-`         omhs++++/+dMMMMMMMMMMMMMMMNyooooyydmNo        .+yy+.
+       -/:o+oss:`            `dhs+++/:+mMMMMMMMMMMMMMMMMMMMNy+oosshdNm`         `omNs`       `
+        .:/oyyys:.`           +mho++//+omMMMMMMMMMMMMMMMMMMyo++oshhmN/         .shh/`          `
+          -+++/::-::-`         omhs++++/+dMMMMMMMMMMMMMMMNyooooyydmNo        .+yy+.              `
           ``  `..--:/:/:-``    `+mdhso++++yNMMMMMMMMMMMMds++osshhmNs      .-oys+.
                    `.--:++++:.`  :hmhyo+o++sdMMMMMMMMMMds+ososhmNm+`  `.:+sss+.
                        `-//+oso+:--smmhsoo++oyNMMMMMMNho+ooyhdmNh/--:+++++/:`
@@ -85,15 +95,28 @@
                                               `/ydmds-
         </pre>
 
+        <canvas id="canvas-element" width="400" height="200"></canvas>
         <video width="480" height="360" controls>
             <source src="art_video.mp4" type="video/mp4">
             This video is not supported in your browser.
         </video>
         <section class="art_gallery">
             <section>
-                <img src="/multimedia/img/art1.jpeg">
-                <img src="/multimedia/img/art2.jpeg">
-                <img src="/multimedia/img/art3.jpeg">
+                <picture>
+                    <source media="(max-width:480px)" srcset="/multimedia/img/art1-small.webp">
+                    <source media="(max-width:760px)" srcset="/multimedia/img/art1-medium.webp">
+                    <img src="/multimedia/img/art1-large.webp" alt="Tiger Sketch">
+                </picture>
+                <picture>
+                    <source media="(max-width:480px)" srcset="/multimedia/img/art1-small.webp">
+                    <source media="(max-width:760px)" srcset="/multimedia/img/art1-medium.webp">
+                    <img src="/multimedia/img/art1-large.webp" alt="Tiger Sketch">
+                </picture>
+                <picture>
+                    <source media="(max-width:480px)" srcset="/multimedia/img/art3-small.webp">
+                    <source media="(max-width:760px)" srcset="/multimedia/img/art3-medium.webp">
+                    <img src="/multimedia/img/art3-large.webp" alt="Tiger Sketch">
+                </picture>
             </section>
         </section>
     </main>
