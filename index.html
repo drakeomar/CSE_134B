@@ -5,18 +5,20 @@
     <title> Drake Omar's Portfolio </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Drake Omar, portfolio, art, cs, resume">
+    <link href="main.css" rel="stylesheet">
+    <script src="myjs.js"></script>
     <style>
         audio{
             margin: 2vh;
         }
         #work-video{
-            border-color: #6F2232;
+            border-color: var(--accent-color);
             border-radius: .3rem;
-            background-color: #6F2232;
+            background-color: var(--accent-color);
         }
         #main-experience>h2{
             padding-top: 1rem;
-            border-top: #6F2232 solid;
+            border-top: var(--accent-color) solid;
         }
 
         #main-experience h3{
@@ -36,11 +38,11 @@
 
         table{
             margin: 1rem;
-            border: #6F2232 solid 2px;
+            border: var(--accent-color) solid 2px;
         }
 
         tr:nth-child(odd){
-            background-color: aliceblue;
+            background-color: #ffdbe3;
         }
 
         #main-art+p{
@@ -69,9 +71,41 @@
             display: flex;
             flex-direction: column; align-items: center;
         }
+        #personal-info a{
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        /**hover enlarge effect (transition/transform)*/
+        #main-intro h3{
+            transition: all .2s ease-in;
+        }
+        #main-intro h3:hover, #main-intro a:hover{
+            transform: scale(1.2);
+            color: #e391ab;
+        }
+
+        #main-work-experience{
+            background-color: var(--section-color);
+        }
+
+        #main-cs-experience {
+            background-color: var(--primary-text-color);
+            color: var(--main-background-color);
+        }
+
+        #main-experience {
+            background-color: var(--primary-text-color);
+        }
+
+        #main-experience h2 {
+            color: var(--main-background-color);
+            background-color: var(--primary-text-color);
+        }
+        #personal-info{
+            margin-bottom: 0px;
+        }
     </style>
-    <link href="main.css" rel="stylesheet">
-    <script src="myjs.js"></script>
+
 </head>
 <body>
     <header>
@@ -83,6 +117,7 @@
                     <input id="check01" type="checkbox" name="menu" />
                     <label for="check01"><div class="line"></div><div class="line"></div><div class="line"></div></label>
                     <ul class="menu-dropdown">
+                        <hr>
                         <li><a href="/index.html">Home</a></li>
                         <hr>
                         <li><a href="/professional_experience.html">Work Experience</a></li>
@@ -91,12 +126,11 @@
                         <hr>
                         <li><a href="/contact.html">Contact</a></li>
                         <hr>
-                        <li><a href="/faqs.html">FAQs</a></li>
                     </ul>
                 </div>
                 <div id="non-icon-items">
                     <a class="non-icon" href="/"><p> Home </p></a>
-                    <a class="non-icon" href="/professional_experience.html/"> <p> CS Projects </p></a>
+                    <a class="non-icon" href="/professional_experience.html/"> <p> Work Experience </p></a>
                     <a class="non-icon" href="/art_projects.html/"> <p> Art Endeavors </p></a>
                     <a class="non-icon" href="/contact.html/"> <p> Contact </p> </a>
                 </div>
@@ -119,19 +153,14 @@
                 <source src="/multimedia/audio/audio.mp3" type="audio/mpeg">
             </audio>
             <section id="personal-info">
-
-
                 <picture id="profile-picture"> <!-- personal image -->
                     <source media="(max-width:760px)" srcset="/multimedia/img/profile-image-med.webp">
                     <source media="(max-width:480px)" srcset="/multimedia/img/profile-image.webp">
                     <img src="/multimedia/img/profile-image.webp" alt="Profile Picture">
                 </picture>
-                <h3 class="appear-1"><a> Github </a></h3>
-                <h3 class="appear-2"><a> LinkedIn </a></h3>
+                <h3 class="appear"><a href="https://github.com/drakeomar"> Github </a></h3>
+                <h3 class="appear"><a href="https://www.linkedin.com/in/drake-omar-07a921186?original_referer=https%3A%2F%2Fwww.google.com%2F"> LinkedIn </a></h3>
             </section>
-
-
-
         </section>
         <br>
         <section id="main-experience"> <!-- professional experience section -->
