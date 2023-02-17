@@ -374,6 +374,7 @@ body {
 body{
     font-family: Urbanist;
     color: var(--primary-text-color);
+    overflow-x:hidden;
 }
 
 #main{
@@ -447,6 +448,27 @@ hr {
     background-color: var(--primary-text-color);
 }
 
+#resume{
+    background-color: rgb(84, 25, 25);
+}
+
+#resume-1{
+    background-color: var(--primary-text-color);
+    color: #1A1A1D;
+    padding-bottom: 0.5rem;
+}
+
+#resume-2{
+    padding-bottom: 0.5rem;
+}
+
+#link-section{
+    background-color: rgb(84, 25, 25);
+    padding: 0.5rem;
+}
+hr{
+    margin: 0px;
+}
 footer {
     display: flex;
     flex-direction: column;

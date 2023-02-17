@@ -16,6 +16,18 @@
         h3{
             text-align: center;
         }
+        h2 code{
+            font-size:2rem;
+        }
+        #project-table{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        table~code{
+            padding: .5rem;
+        }
     </style>
 </head>
 <body>
@@ -50,40 +62,38 @@
     </header>
     <main>
         <h1> Professional Experience</h1>
-        <section>
+        <section id="resume">
             <h2> Work and Resume Experience </h2>
-            <ul> <h3> Wire Cut Company, Inc. </h3>
-                <li>
-                    In 2021, oversaw contract procurement and approved quotes for $4.8 million in sales from Fortune 100 companies
-                </li>
-                <li>
-                    Automated particular office tasks like payroll or batch printing with scripts in C#, Python and Qt, Powershell, and Windows CMD
-                </li>
-                <li>
-                    Identified patterns and implemented measures to maintain the integrity of the security through controls so as to abide by industry standards (NIST SP 800-171)
-                </li>
-            </ul>
-            <ul> <h3>Hershey's Market</h3>
-                <li>
-                    Helped monitor daily operations of the Deli and the grocery section including inventory and sales
-                </li>
-                <li>
-                    Prepared food for customers including making sandwiches, cutting and selling meat
-                </li>
-                <li>
-                    Forward facing representative for answering customer questions and product distributors(Customer Service)
-                </li>
-            </ul>
+            <section id="resume-1">
+                <ul> <h3> Wire Cut Company, Inc. </h3>
+                    <li>
+                        In 2021, oversaw contract procurement and approved quotes for $4.8 million in sales from Fortune 100 companies
+                    </li>
+                    <li>
+                        Automated particular office tasks like payroll or batch printing with scripts in C#, Python and Qt, Powershell, and Windows CMD
+                    </li>
+                    <li>
+                        Identified patterns and implemented measures to maintain the integrity of the security through controls so as to abide by industry standards (NIST SP 800-171)
+                    </li>
+                </ul>
+            </section>
+            <section id="resume-2">
+                <ul> <h3>Hershey's Market</h3>
+                    <li>
+                        Helped monitor daily operations of the Deli and the grocery section including inventory and sales
+                    </li>
+                    <li>
+                        Prepared food for customers including making sandwiches, cutting and selling meat
+                    </li>
+                    <li>
+                        Forward facing representative for answering customer questions and product distributors(Customer Service)
+                    </li>
+                </ul>
+            </section>
         </section>
-        <section>
+        <hr>
+        <section id="project-table">
             <h2> <code> CS Projects </code> </h2>
-            <code>
-
-                for ( day = 0; day < forever; day++) {
-                    apply();
-                    interview();
-                }
-            </code>
             <table>
                 <colgroup>
                     <col span="2">
@@ -117,7 +127,15 @@
                     <td> <a href="https://github.com/drakeomar/BuyBot"> GitHub</a></td>
                 </tr>
             </table>
+            <code>
+
+                for ( day = 0; day < forever; day++) {
+                apply();
+                interview();
+                }
+            </code>
         </section>
+        <hr>
         <section id="link-section">
             <h2>Links</h2>
             <p><a href="https://github.com/drakeomar"> Github Profile</a></p>
