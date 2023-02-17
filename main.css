@@ -49,6 +49,7 @@
     --accent-color: #6F2232;
     --section-color: rgb(84, 25, 25);
     --non-main-color: rgb(36, 14, 14);
+    --highlight-color: #dba8a8;
 }
 
 body {
@@ -433,4 +434,8 @@ footer {
     margin: 0%;
     background-color: var(--non-main-color);
     padding-bottom: 1rem;
+}
+
+.highlight{
+    background: var(--highlight-color);
 }
