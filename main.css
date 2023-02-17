@@ -135,20 +135,18 @@ body {
         flex-direction: row;
     }
 
-    #art-1, #art-2{
-        justify-content: center;
-    }
-
     figure {
         display: inline-block;
-        border: 1px solid var(--primary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 1rem;
         margin: 20px; /* adjust as needed */
     }
     figure img {
         vertical-align: top;
+        border-radius: 1rem;
     }
     figure figcaption {
-        border: 1px solid var(--primary-color);
+
         text-align: center;
     }
     aside {
@@ -159,17 +157,10 @@ body {
         box-shadow: inset 5px 0 5px -5px var(--line-color);
         font-style: italic;
     }
-    .appear-1{
+    .appear-1-test{
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 1s linear;
-    }
-    .appear-2{
-
-    }
-    .appear-1{
-        visibility: visible;
-        opacity: 1;
     }
     #art-details-2-mobile{
         display: none;
@@ -229,9 +220,6 @@ body {
         padding:.65em;
     }
 
-    #main-experience{
-
-    }
     #home-work{
         display:flex;
         flex-direction:column;
