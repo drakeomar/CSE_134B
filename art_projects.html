@@ -40,11 +40,15 @@
             }
 
             picture{
-                width: 60%;
+                width: 70%;
                 display:flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items:center;
+                padding: 1rem;
+            }
+            picture p, picture h3{
+                padding: 1rem;
             }
         }
 
@@ -143,22 +147,34 @@
 
         <section class="art_gallery">
                 <picture>
-                    <p>Description</p>
+                    <div>
+                        <h3>Waves and Stripes</h3>
+                        <p> Description</p>
+                    </div>
                     <source media="(max-width:480px)" srcset="/multimedia/img/art1-small.webp">
                     <source media="(max-width:760px)" srcset="/multimedia/img/art1-medium.webp">
                     <img src="/multimedia/img/art1-large.webp" alt="Tiger Sketch">
                 </picture>
                 <picture>
-                    <source media="(max-width:480px)" srcset="/multimedia/img/art1-small.webp">
-                    <source media="(max-width:760px)" srcset="/multimedia/img/art1-medium.webp">
-                    <img src="/multimedia/img/art1-large.webp" alt="Tiger Sketch">
-                    <p>Description</p>
+                    <!-- use jpeg for slightly higher quality for collage image -->
+                    <source media="(max-width:480px)" srcset="/multimedia/img/art2-small.jpeg">
+                    <source media="(max-width:760px)" srcset="/multimedia/img/art2-medium.jpeg">
+                    <img src="/multimedia/img/art2-large.jpeg" alt="The Isms Collage">
+                    <div>
+                        <h3>The Isms Collage</h3>
+                        <p>Description</p>
+                    </div>
+
                 </picture>
                 <picture>
-                    <p>Description</p>
+                    <div>
+                        <h3>Blackfish Prism Break</h3>
+                        <p>Description</p>
+                    </div>
+
                     <source media="(max-width:480px)" srcset="/multimedia/img/art3-small.webp">
                     <source media="(max-width:760px)" srcset="/multimedia/img/art3-medium.webp">
-                    <img src="/multimedia/img/art3-large.webp" alt="Tiger Sketch">
+                    <img src="/multimedia/img/art3-large.webp" alt="Geometrical Orca">
 
                 </picture>
         </section>
