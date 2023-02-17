@@ -9,6 +9,43 @@
         h1{
             margin-top: 5rem;
         }
+        textarea{
+            width: 50%;
+            height: 5rem;
+            margin: 0.5rem;
+
+        }
+        form, .button-wrapper, fieldset{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        #feedback-form{
+            border: #e8d1d7 solid 2px;
+            width: 75%;
+            padding: .5rem;
+            border-radius: .65rem;
+        }
+        #message-form{
+            margin: .5rem;
+            border-radius: .5rem;
+        }
+        #message-form textarea{
+            width: 40vw;
+        }
+        fieldset{
+
+            border-radius: .5rem;
+            border: #e8d1d7 solid 2px;
+
+        }
+        #feedback-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -42,22 +79,26 @@
         </div>
     </header>
     <main>
-        <h1> Contact Me! </h1>
-        <h2> Submit Anonymous Feedback </h2>
-        <form action="/feedback_collector.php" method="post">
-            <label for="feedback"><em>Feedback: </em></label>
-            <br>
-            <textarea id="feedback"> </textarea>
-        </form>
-        <button>
-            Submit Feedback
-        </button>
+        <h1> Contact Me! </h1><hr>
+        <section id="feedback-section" class="red-section">
+            <h2> Submit Anonymous Feedback </h2>
+            <form id="feedback-form" action="/feedback_collector.php" method="post">
+                <label for="feedback"><em>Give Your Honest Feedback: </em></label>
+                <br>
+                <textarea id="feedback"> </textarea>
+                <div class="button-wrapper">
+                    <button>
+                        Submit Feedback
+                    </button>
+                </div>
+            </form>
+        </section><hr>
         <template>
             <h3>Feedback Submitted!</h3> <!-- display if basic form filled out and submitted -->
         </template>
         <br>
         <h2> Reach Out! </h2>
-        <form action="/contact_collector.php" method="post">
+        <form id="message-form" action="/contact_collector.php" method="post">
             <legend><code>Send a Message!</code></legend>
             <fieldset>
                 <label for="roles">What describes you best from the list: </label>
@@ -87,16 +128,19 @@
                     <option value="Indeed">
                     <option value="Other">
                 </datalist>
-                <br><br>
+                <br>
                 <label for="email">What is a good email?: </label>
                 <input type="text" size="24" id="email" required="true">
-                <br><br>
+                <br>
                 <label for="optional"> Provide an optional message! </label>
-                <br><br>
+                <br>
                 <textarea id="optional"> </textarea>
                 <br>
-                <input type="submit">
-                <svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 0C229.668571 0 0 229.668571 0 512s229.668571 512 512 512 512-229.668571 512-512S794.331429 0 512 0z m307.2 343.771429s-267.702857 295.497143-327.68 365.714285c-59.977143 70.217143-106.788571 0-106.788571 0L210.651429 529.554286s-27.794286-42.422857 21.942857-81.92c46.811429-38.034286 84.845714 0 84.845714 0l122.88 128.731428L746.057143 291.108571s29.257143-20.48 59.977143 5.851429c23.405714 21.942857 13.165714 46.811429 13.165714 46.811429z" fill="#68BF7B" /></svg>
+                <div>
+                    <input type="submit">
+                    <svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 0C229.668571 0 0 229.668571 0 512s229.668571 512 512 512 512-229.668571 512-512S794.331429 0 512 0z m307.2 343.771429s-267.702857 295.497143-327.68 365.714285c-59.977143 70.217143-106.788571 0-106.788571 0L210.651429 529.554286s-27.794286-42.422857 21.942857-81.92c46.811429-38.034286 84.845714 0 84.845714 0l122.88 128.731428L746.057143 291.108571s29.257143-20.48 59.977143 5.851429c23.405714 21.942857 13.165714 46.811429 13.165714 46.811429z" fill="#68BF7B" /></svg>
+                </div>
+
             </fieldset>
         </form>
                 <template>
