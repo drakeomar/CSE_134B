@@ -6,8 +6,20 @@
     <title>Drake Omar's Art Projects</title>
     <link href="main.css" rel="stylesheet">
     <style>
-        h1{
+        #art-intro {
             padding-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 15ch}
+        }
+        h1 {
+            /** typing effect for non-mobile sized devices with screens*/
+            animation: typing 2.0s steps(20, end),
+            blinking 1s step-end infinite;
         }
         #text-art{
             font-size: .5rem;
@@ -53,8 +65,9 @@
         </div>
     </header>
     <main>
-        <h1>Art Endeavors</h1>
-        <pre id="text-art">
+        <section id="art-intro">
+            <h1>Art Endeavors</h1>
+            <pre id="text-art">
                                         ``.--:///+++oo++//:-`
                                   `--/+++///::::-:://++osyyhys+:.
                                .:++/:-....```.```......-:/++osshhyo:.
@@ -95,11 +108,13 @@
                                               `/ydmds-
         </pre>
 
-        <canvas id="canvas-element" width="400" height="200"></canvas>
-        <video width="480" height="360" controls>
-            <source src="art_video.mp4" type="video/mp4">
-            This video is not supported in your browser.
-        </video>
+            <canvas id="canvas-element" width="400" height="200"></canvas>
+            <video width="480" height="360" controls>
+                <source src="art_video.mp4" type="video/mp4">
+                This video is not supported in your browser.
+            </video>
+        </section>
+
         <section class="art_gallery">
             <section>
                 <picture>

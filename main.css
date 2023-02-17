@@ -62,7 +62,7 @@ body {
         letter-spacing: .25em;
         /** typing effect for non-mobile sized devices with screens*/
         animation: typing 3.5s steps(30, end),
-        blink-caret 1s step-end infinite;
+        blinking 1s step-end infinite;
     }
     nav p:hover{
         background-color: var(--accent-color);
@@ -186,7 +186,7 @@ body {
 }
 
 
-@keyframes blink-caret {
+@keyframes blinking {
     from, to { border-color: transparent }
     50% { border-color: var(--primary-color); }
 }
@@ -259,7 +259,7 @@ body {
         to { width: 10ch}
     }
 
-    @keyframes blink-caret {
+    @keyframes blinking {
         from, to { border-color: transparent }
         50% { border-color: var(--primary-color); }
     }
@@ -273,7 +273,7 @@ body {
         opacity: 0;
         /** typing effect for mobile sized devices with screens*/
         animation: typing 1.5s steps(15,end),
-                blink-caret 1s step-end,
+                blinking 1s step-end,
                 fadeIn .15s;
         animation-fill-mode: forwards;
         animation-delay: 0.5s;
@@ -283,7 +283,7 @@ body {
         opacity: 0;
         /** typing effect for mobile sized devices with screens*/
         animation: typing-2 1.5s steps(15,end),
-                    blink-caret 1s step-end,
+                    blinking 1s step-end,
                     .15s fadeIn;
         animation-fill-mode: forwards;
         animation-delay: 2.1s;
@@ -293,7 +293,7 @@ body {
         opacity: 0;
         /** typing effect for mobile sized devices with screens*/
         animation: typing-3 1.5s steps(18,end),
-                blink-caret 1s step-end infinite,
+                blinking 1s step-end infinite,
                 .15s fadeIn;
         animation-fill-mode: forwards;
         animation-delay: 3.6s;
