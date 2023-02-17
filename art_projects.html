@@ -22,9 +22,17 @@
         }
         #text-art{
             font-size: .3rem;
-            display: flex; justify-content: center;
+            display: flex;
+            justify-content: center;
         }
-        @media only screen and (min-width: 505px){
+        .reg-item{
+            display: none;
+        }
+        picture{
+            display:flex;
+            padding: 1rem;
+        }
+        @media only screen and (min-width: 506px){
             @keyframes typing {
                 from { width: 0 }
                 to { width: 15ch}
@@ -50,8 +58,27 @@
             picture p, picture h3{
                 padding: 1rem;
             }
+            .mobile-item{
+                display: none;
+            }
+            .reg-item{
+                display: block;
+            }
         }
-
+        @media only screen and (max-width: 505px) {
+            picture{
+                width:70%;
+                flex-direction:column;
+                align-content: center;
+                justify-content: center;
+            }
+            .art_gallery{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
         #canvas-element{
             background-color: white;
         }
@@ -149,18 +176,22 @@
                 <picture>
                     <div>
                         <h3>Waves and Stripes</h3>
-                        <p> Description</p>
+                        <p> Made in 2017, this piece illustrates the fine line between nature and our perspective.</p>
                     </div>
                     <source media="(max-width:480px)" srcset="/multimedia/img/art1-small.webp">
                     <source media="(max-width:760px)" srcset="/multimedia/img/art1-medium.webp">
                     <img src="/multimedia/img/art1-large.webp" alt="Tiger Sketch">
                 </picture>
                 <picture>
+                    <div class="mobile-item">
+                        <h3>The Isms</h3>
+                        <p> Made in 2017, this piece illustrates the fine line between nature and our perspective.</p>
+                    </div>
                     <!-- use jpeg for slightly higher quality for collage image -->
                     <source media="(max-width:480px)" srcset="/multimedia/img/art2-small.jpeg">
                     <source media="(max-width:760px)" srcset="/multimedia/img/art2-medium.jpeg">
                     <img src="/multimedia/img/art2-large.jpeg" alt="The Isms Collage">
-                    <div>
+                    <div class="reg-item">
                         <h3>The Isms Collage</h3>
                         <p>Description</p>
                     </div>
